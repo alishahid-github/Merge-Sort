@@ -48,23 +48,23 @@ void mergeSort(int arr[], int p, int r)
 int main() 
 { 
 	
-	int arr[100000];
+	int arr[10000];
 	ifstream file;
-	file.open("data10Ka.txt");
-	for (int i = 0; i < 100000; i++)
+	file.open("data10Ka.txt");         //testing file for input
+	for (int i = 0; i < 10000; i++)
 	{
 		file >> arr[i];
 	}
 	chrono::steady_clock::time_point start = chrono::steady_clock::now();
 
-	mergeSort(arr, 0, 100000 - 1);
+	mergeSort(arr, 0, 10000 - 1);
 
 	chrono::steady_clock::time_point end = chrono::steady_clock::now();
 	chrono::steady_clock::duration d = end - start;
 	cout << "Time taken is = " << chrono::duration_cast<chrono::seconds>(d).count() << endl;
 
 	cout << "\nSorted array is \n";
-	for (int i = 0; i < 100000; i++)
+	for (int i = 0; i < 10000; i++)
 		cout << "  " << arr[i];
 	return 0;
 } 
