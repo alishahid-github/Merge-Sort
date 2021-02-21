@@ -50,7 +50,7 @@ int main()
 	
 	int arr[100000];
 	ifstream file;
-	file.open("data100Ka.txt");
+	file.open("data10Ka.txt");
 	for (int i = 0; i < 100000; i++)
 	{
 		file >> arr[i];
